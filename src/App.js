@@ -12,11 +12,16 @@ function App() {
           return (
             <li key={person.id}>
               <div className="profile">
-                <div className="full-name">
-                  <span>{person.firstName} </span>
-                  <span>{person.lastName} </span>
+                <img src={person.avatar} alt="" />
+                <div className="profile-top">
+                  <div className="full-name">
+                    <span>{person.firstName} </span>
+                    <span>{person.lastName} </span>
+                  </div>
+                  <div className="job-title">
+                    <span>{person.title}</span>
+                  </div>
                 </div>
-                <p>{person.title}</p>
               </div>
               <div className="contact-info">
                 <span>{person.contact.phone}</span>
