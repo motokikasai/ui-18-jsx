@@ -12,7 +12,10 @@ function App() {
           return (
             <li key={person.id}>
               <div className="profile">
-                <img src={person.avatar} alt="" />
+                <img
+                  src={person.avatar}
+                  alt={person.firstName + person.firstName}
+                />
                 <div className="profile-top">
                   <div className="full-name">
                     <span>{person.firstName}</span>
@@ -25,11 +28,26 @@ function App() {
                 </div>
               </div>
               <div className="contact-info">
-                <span>{person.contact.phone}</span>
-                <span>{person.contact.email}</span>
-                <span>{person.contact.url}</span>
+                <span>
+                  <a href="google.com" target="_blank">
+                    {person.contact.phone}
+                  </a>
+                </span>
+                <span>
+                  <a href="google.com" target="_blank">
+                    {person.contact.email}
+                  </a>
+                </span>
+                <span>
+                  <a href="google.com" target="_blank">
+                    {person.contact.url}
+                  </a>
+                </span>
               </div>
-              <div className="since">{person.memberSince}</div>
+              <div className="since">
+                {/* {new Intl.DateTimeFormat("de-DE").format(person.memberSince)} */}
+                member since {person.memberSince}
+              </div>
             </li>
           );
         })}
