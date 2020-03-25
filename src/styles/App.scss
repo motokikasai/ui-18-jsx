@@ -125,3 +125,16 @@ a {
   color: white;
   font-size: 0.9rem;
 }
+
+.link-phone,
+.link-email,
+.link-url {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.link-phone:hover,
+.link-email:hover,
+.link-url:hover {
+  opacity: 0.6;
+}

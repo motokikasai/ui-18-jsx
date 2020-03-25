@@ -28,25 +28,27 @@ function App() {
                 </div>
               </div>
               <div className="contact-info">
-                <span>
+                <span class="link-phone">
                   <a href="google.com" target="_blank">
                     {person.contact.phone}
                   </a>
                 </span>
-                <span>
+                <span class="link-email">
                   <a href="google.com" target="_blank">
                     {person.contact.email}
                   </a>
                 </span>
-                <span>
+                <span class="link-url">
                   <a href="google.com" target="_blank">
                     {person.contact.url}
                   </a>
                 </span>
               </div>
               <div className="since">
-                {/* {new Intl.DateTimeFormat("de-DE").format(person.memberSince)} */}
-                member since {person.memberSince}
+                <span>member since </span>
+                {new Intl.DateTimeFormat("de-DE").format(
+                  parseInt(person.memberSince)
+                )}
               </div>
             </li>
           );
