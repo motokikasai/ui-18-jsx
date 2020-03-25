@@ -15,8 +15,9 @@ function App() {
                 <img src={person.avatar} alt="" />
                 <div className="profile-top">
                   <div className="full-name">
-                    <span>{person.firstName} </span>
-                    <span>{person.lastName} </span>
+                    <span>{person.firstName}</span>
+                    <span>{person.lastName}</span>
+                    {person.isAdmin && <span className="admin">admin</span>}
                   </div>
                   <div className="job-title">
                     <span>{person.title}</span>
@@ -28,6 +29,7 @@ function App() {
                 <span>{person.contact.email}</span>
                 <span>{person.contact.url}</span>
               </div>
+              <div className="since">{person.memberSince}</div>
             </li>
           );
         })}
